@@ -1,18 +1,14 @@
-const fs = require('fs');
-
-const readmeContent = `# WhatsApp Water Usage Bot
-
-## Overview
+# Overview
 
 The **WhatsApp Water Usage Bot** is a Node.js application that leverages the Twilio API to interact with users via WhatsApp. The bot is designed to collect daily water consumption reports from users and store the data in an Excel file. It also sends periodic reminders to ensure users submit their reports.
 
-## Features
+# Features
 
 - **WhatsApp Messaging**: Send and receive messages through WhatsApp using Twilio.
 - **Data Storage**: Record water consumption data in an Excel spreadsheet.
 - **Automated Reminders**: Send periodic reminders to users to submit their daily water usage.
 
-## Application Details
+# Application Details
 
 ### Purpose
 
@@ -32,11 +28,17 @@ The bot is intended to:
    - If the message includes a valid water usage value (in litres), the data is appended to the Excel file along with the current date.
    - A confirmation message is sent back to the user.
 
+   ![Receiving Messages](images/data%20received.jpeg)
+
 3. **Prompting Users**:
    - If the incoming message does not contain valid data, the bot sends a prompt asking the user to provide their water consumption in the correct format.
 
+   ![Prompting Users](images/pls%20provide.jpeg)
+
 4. **Sending Reminders**:
    - The application sends periodic reminders (every 30 seconds for testing) to a predefined WhatsApp number to submit their daily water usage. This interval can be adjusted for production use.
+
+   ![Sending Reminders](images/today%20usage.jpeg)
 
 ### Components
 
@@ -45,7 +47,7 @@ The bot is intended to:
 - **Excel Handling**: Uses the \`xlsx\` library to read and write data to an Excel file.
 - **Environment Variables**: Configured using the \`dotenv\` library to securely manage sensitive information like Twilio credentials and port numbers.
 
-## How to Use
+# How to Use
 
 1. **Initial Interaction**:
    - When a user first interacts with the bot, they will receive a prompt asking them to submit their daily water usage.
@@ -57,12 +59,6 @@ The bot is intended to:
 3. **Receiving Reminders**:
    - Users will receive periodic reminders to submit their water usage report. Adjust the reminder interval as needed for production.
 
-## Contact
+# Contact
 
-For any questions or issues, please contact [your-email@example.com](mailto:your-email@example.com).
-`;
-
-fs.writeFile('README.md', readmeContent, (err) => {
-    if (err) throw err;
-    console.log('README.md has been created!');
-});
+For any questions or issues, please contact [ma8183468@gmail.com](mailto:ma8183468@gmail.com)
