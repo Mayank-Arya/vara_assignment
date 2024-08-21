@@ -40,6 +40,13 @@ The bot is intended to:
 
    <img src="images/data%20received.jpeg" alt="Receiving Messages" width="200"/>
 
+
+5. **Excel Report**: 
+   - This is how the data will be stored in the excel sheet. 
+
+   <img src="images/data vara.png" alt="" width="200"/>
+
+
 ### Components
 
 - **Server**: An Express.js server that handles incoming POST requests from Twilio and interacts with the Excel file.
