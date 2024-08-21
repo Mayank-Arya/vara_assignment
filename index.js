@@ -24,7 +24,7 @@ if (!fs.existsSync(filePath)) {
     xlsx.writeFile(wb, filePath);
 }
 
-app.post('/webhooks', (req, res) => {
+app.post('/getData', (req, res) => {
     const incomingMsg = req.body.Body;
     const from = req.body.From;
     const date = new Date().toLocaleString();  
