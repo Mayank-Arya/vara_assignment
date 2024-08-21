@@ -64,7 +64,7 @@ setInterval(() => {
         from: whatsappNum,
         to: `whatsapp:+919389327562`  
     });
-}, 300000); 
+}, 30000); 
 
 app.listen(port, () => {
     console.log(`Running on port ${port}`);
