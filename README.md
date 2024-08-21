@@ -61,4 +61,10 @@ The bot is intended to:
 
 # Contact
 
-For any questions or issues, please contact [ma8183468@gmail.com](mailto:ma8183468@gmail.com)
+For any questions or issues, please contact [your-email@example.com](mailto:your-email@example.com).
+`;
+
+fs.writeFile('README.md', readmeContent, (err) => {
+    if (err) throw err;
+    console.log('README.md has been created!');
+});
