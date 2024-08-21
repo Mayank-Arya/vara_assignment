@@ -22,23 +22,23 @@ The bot is intended to:
 1. **Initialization**:
    - Upon startup, the application checks for the existence of an Excel file (\`water_usage_report.xlsx\`). If the file does not exist, it creates one with headers \`Date\` and \`Value\`.
 
-2. **Receiving Messages**:
+2. **Sending Reminders**:
+   - The application sends periodic reminders (every 30 seconds for testing) to a predefined WhatsApp number to submit their daily water usage. This interval can be adjusted for production use.
+
+   <img src="images/today%20usage.jpeg" alt="Sending Reminders" width="200"/>
+
+3. **Prompting Users**:
+   - If the incoming message does not contain valid data, the bot sends a prompt asking the user to provide their water consumption in the correct format.
+
+   <img src="images/pls%20provide.jpeg" alt="Prompting Users" width="200"/>
+
+4.  **Receiving Messages**:
    - The application listens for incoming WhatsApp messages at the \`/webhooks\` endpoint.
    - When a message is received, it is processed to check if it contains water usage data.
    - If the message includes a valid water usage value (in litres), the data is appended to the Excel file along with the current date.
    - A confirmation message is sent back to the user.
 
-   ![Receiving Messages](images/data%20received.jpeg)
-
-3. **Prompting Users**:
-   - If the incoming message does not contain valid data, the bot sends a prompt asking the user to provide their water consumption in the correct format.
-
-   ![Prompting Users](images/pls%20provide.jpeg)
-
-4. **Sending Reminders**:
-   - The application sends periodic reminders (every 30 seconds for testing) to a predefined WhatsApp number to submit their daily water usage. This interval can be adjusted for production use.
-
-   ![Sending Reminders](images/today%20usage.jpeg)
+   <img src="images/data%20received.jpeg" alt="Receiving Messages" width="200"/>
 
 ### Components
 
@@ -62,9 +62,3 @@ The bot is intended to:
 # Contact
 
 For any questions or issues, please contact [your-email@example.com](mailto:your-email@example.com).
-`;
-
-fs.writeFile('README.md', readmeContent, (err) => {
-    if (err) throw err;
-    console.log('README.md has been created!');
-});
